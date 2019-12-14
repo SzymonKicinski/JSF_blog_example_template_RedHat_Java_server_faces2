@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/login-template.xhtml">
+
+	<ui:define name="content">
+
+		<h:form id="loginForm">
+			<div class="body"></div>
+			<div class="grad"></div>
+			
+			<div class="header">
+				<div>
+					#{loginPage.part1}<span>#{loginPage.part2}</span>
+				</div>
+			</div>			
+			<br />
+			
+			<div class="login" id="login">		
+				<h:inputText id="login" value="#{loginBB.login}" /> 
+				<h:inputSecret id="pass" value="#{loginBB.pass}" /> 
+				<h:commandButton id="loginButton" action="#{loginBB.doLogin()}" update="msg" value="#{loginPage.title}" />
+				<h:messages id="msg" style="font-size: 20px; align:center; margin:200px 0px 0px 0px"/>
+			</div>		
+			
+			<div class="header2">
+				<div>
+					#{loginPage.join}<span>  #{loginPage.tous}</span>
+				</div>
+			</div>
+			
+			<div class="register">
+				<h2>#{loginPage.name}</h2>				
+				<h:inputText id="newUser" value="#{registerBB.login}" /> 				
+				<h3>#{loginPage.password}</h3>
+				<h:inputSecret id="newPass" value="#{registerBB.pass}" />
+				<h4>#{loginPage.passwordVerification}</h4>
+				<h:inputSecret id="newPass2" value="#{registerBB.pass2}" />
+				<h:commandButton action="#{registerBB.doRegister()}" update="msg" value="#{loginPage.sign}" />					
+			</div>
+			
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<ui:composition template="/templates/main-template.xhtml">
+
+	<ui:define name="title">
+		#{mainPage.title}
+	</ui:define>
+
+	<ui:define name="content">
+
+		<h:form id="templatemo_wrapper">
+			<div id="templatemo_wrapper">
+
+				<div id="templatemo_sidebar">
+
+					<div id="menu">
+						<ul class="navigation">
+							<h:commandLink action="#{navigationController.showPage}"
+								value="Home">
+								<f:param name="pageId" value="home" />
+							</h:commandLink>
+							<h:commandLink action="#{navigationController.showPage}"
+								value="Create note">
+								<f:param name="pageId" value="addNote" />
+							</h:commandLink>
+							<li><a href="#" class="selected">Note Dashboard</a></li>
+							<h:commandLink action="#{navigationController.showPage}"
+								value="Administration console">
+								<f:param name="pageId" value="adminConsole" />
+							</h:commandLink>
+							<h:messages id="mess" style=" height:100%; font-size: 20px; align:center; margin:2px 0px 0px 0px"/>
+						</ul>
+					</div>
+				</div>
+
+				<div id="templatemo_content">
+
+					<div class="filter" id="add_form_filter">
+						<h:outputText value="Assignee id:  " styleClass="text" />
+						<h:selectOneMenu value="#{dashboardNoteBB.assigneIdFilter}">
+							<f:selectItem itemValue="#{-1}" itemLabel="-- all -- " />
+							<f:selectItems value="#{dashboardNoteBB.usersAsList()}"
+								var="user" itemValue="#{user.userid}" itemLabel="#{user.name}" />
+						</h:selectOneMenu>
+						<h:outputText value="Reporter id:    "
+							styleClass="text_margin_left" />
+						<h:selectOneMenu value="#{dashboardNoteBB.reporterIdFilter}">
+							<f:selectItem itemValue="#{-1}" itemLabel="-- all -- " />
+							<f:selectItems value="#{dashboardNoteBB.usersAsList()}"
+								var="user" itemValue="#{user.userid}" itemLabel="#{user.name}" />
+						</h:selectOneMenu>
+						<h:outputText value="Search:" styleClass="text_margin_left" />
+						<h:inputText id="title" value="#{dashboardNoteBB.search}"
+							a:maxlength="30" />
+						<h:commandButton styleClass="submit_btn_filter"
+							action="#{dashboardNoteBB.filter()}" value="✓" />
+						<h:commandButton styleClass="submit_btn_filter"
+							action="#{dashboardNoteBB.clearFilter()}" value="✖" />
+					</div>
+
+					<div class="dashboard">
+						<h:outputText value="Created notes:" styleClass="text_title" />
+						<ui:repeat value="#{dashboardNoteBB.getList('Created')}"
+							var="createdNote">
+							<div class="sticky">
+								<h5>Title: #{createdNote.title}</h5>
+								<h4>Description: #{createdNote.description}</h4>
+								<h4>Assignee: #{createdNote.assignee.name}</h4>
+								<h4>Reporter: #{createdNote.reporter.name}</h4>
+								<h:commandButton value="edytuj" styleClass="submit_btn"
+									action="#{dashboardNoteBB.editNote(createdNote)}" />
+									<h:commandButton value="usuń" styleClass="submit_btn"
+									action="#{dashboardNoteBB.deleteNote(createdNote)}" />
+							</div>
+						</ui:repeat>
+					</div>
+					<div class="dashboard">
+						<h:outputText value="In progress notes:" styleClass="text_title" />
+						<ui:repeat value="#{dashboardNoteBB.getList('In_progress')}"
+							var="createdNote">
+							<div class="sticky">
+								<h5>Title: #{createdNote.title}</h5>
+								<h4>Description: #{createdNote.description}</h4>
+								<h4>Assignee: #{createdNote.assignee.name}</h4>
+								<h4>Reporter: #{createdNote.reporter.name}</h4>
+								<h:commandButton value="edytuj" styleClass="submit_btn"
+									action="#{dashboardNoteBB.editNote(createdNote)}" />
+								<h:commandButton value="usuń" styleClass="submit_btn"
+									action="#{dashboardNoteBB.deleteNote(createdNote)}" />
+							</div>
+						</ui:repeat>
+					</div>
+					<div class="dashboard">
+						<h:outputText value="Done notes:" styleClass="text_title" />
+						<ui:repeat value="#{dashboardNoteBB.getList('Done')}"
+							var="createdNote">
+							<div class="sticky">
+								<h5>Title: #{createdNote.title}</h5>
+								<h4>Description: #{createdNote.description}</h4>
+								<h4>Assignee: #{createdNote.assignee.name}</h4>
+								<h4>Reporter: #{createdNote.reporter.name}</h4>
+								<h:commandButton value="edytuj" styleClass="submit_btn"
+									action="#{dashboardNoteBB.editNote(createdNote)}" />
+								<h:commandButton value="usuń" styleClass="submit_btn"
+									action="#{dashboardNoteBB.deleteNote(createdNote)}" />
+							</div>
+						</ui:repeat>
+					</div>
+
+				</div>
+
+				<div class="cleaner"></div>
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>

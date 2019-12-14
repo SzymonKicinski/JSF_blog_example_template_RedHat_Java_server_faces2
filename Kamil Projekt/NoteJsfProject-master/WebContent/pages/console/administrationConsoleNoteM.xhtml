@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+
+<h:body>
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" collapsible="true">
+			<h:form>
+				<p:commandButton value="Log out" id="withIcon"
+					actionListener="#{loginBB.doLogout()}" icon="ui-icon-disk" />
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="0" header="Kamil Bargiel @ 2018"
+			resizable="true" collapsible="true" style="text-align: center">
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="250" header="Menu"
+			resizable="true" collapsible="true">
+			<h:form>
+				<p:growl id="messages" showDetail="false" />
+				<p:menu>
+					<p:submenu label="Management">
+						<p:menuitem value="Back to user view"
+							outcome="/pages/note/note.xhtml" icon="ui-icon-home" />
+						<p:menuitem value="User management"
+							outcome="/pages/console/administrationConsoleUserM.xhtml"
+							icon="ui-icon-star" />
+						<p:menuitem value="Note management"
+							outcome="/pages/console/administrationConsoleNoteM.xhtml"
+							icon="ui-icon-star" />
+					</p:submenu>
+				</p:menu>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+			
+			<p:dataTable value="#{noteManagementBB.notesAsList()}" var="note"
+				rows="10" paginator="true"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15" tableStyle="width:auto">
+				<f:facet name="header">
+            			Notes list
+        			</f:facet>
+
+				<p:column headerText="User name:" style="maring: auto;">
+					<h:outputText value="#{note.title}" />
+				</p:column >
+				<p:column headerText="Note description:">
+					<h:outputText value="#{note.description}" />
+				</p:column>
+				<p:column headerText="Note assignee:" >
+					<h:outputText value="#{note.assignee.name}" />
+				</p:column>
+				<p:column headerText="Note reporter:" >
+					<h:outputText value="#{note.reporter.name}" />
+				</p:column>
+				<p:column headerText="Note status:">
+					<h:outputText value="#{note.status.status}" />
+				</p:column>
+				<p:column name="paginatorTopLeft">
+				<h:form>
+				<p:commandButton value="Edit note" id="withIcon"
+								action="#{noteManagementBB.editNote(note)}"
+								icon="ui-icon-disk" ajax="false" update="msg"/>				
+				</h:form>
+				</p:column>
+			</p:dataTable>
+			
+		</p:layoutUnit>
+
+	</p:layout>
+</h:body>
+
+
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/main-template.xhtml">
+
+	<ui:define name="title">
+		#{mainPage.title}
+	</ui:define>
+
+	<ui:define name="content">
+
+		<h:form id="templatemo_wrapper">
+			<div id="templatemo_wrapper">
+
+				<div id="templatemo_sidebar">
+
+					<div id="menu">
+						<ul class="navigation">
+							<li><a href="#" class="selected">Home</a></li>
+							<h:commandLink action = "#{navigationController.showPage}" value = "Create note">
+      							<f:param name = "pageId" value = "addNote" />
+   							</h:commandLink>
+							<h:commandLink action = "#{navigationController.showPage}" value = "Note Dashboard">
+      							<f:param name = "pageId" value = "dashboardNote" />
+   							</h:commandLink>
+   							<h:commandLink action="#{navigationController.showPage}"
+								value="Administration console">
+								<f:param name="pageId" value="adminConsole" />
+							</h:commandLink>
+							<h:messages id="msg" style=" height:100%; font-size: 20px; align:center; margin:2px 0px 0px 0px"/>
+						</ul>
+					</div>
+				</div>
+
+				<div id="templatemo_content">
+				
+				<div class="panel" id="aboutus">
+                        <h2>About Note</h2>
+                        
+                        <p>Note is an application which allows you to assign tasks to other user. But it is not the only one purpose of Note.
+                        You are also able to add notes for yourself to remember about most important things in daily life. Easy filtering is provided
+                        to quickly navigate in your tasks.</p>
+
+                        <div class="cleaner cleaner_h40"></div>
+                        <h3>Message from the author</h3>
+                        <blockquote>
+                        <p>Note was created only as "final paper". Most important thing to learn in development process was how backend
+                        part of JSF technology works. I was never huge fan of front-end technologies so it's for sure the weakest part.</p>
+                        <cite>Kamil - <span>CEO</span></cite> </blockquote>
+                        <p><h:graphicImage url="/resources/template/img/note.jpg" alt="Image 1" class="image_wrapper" /></p>
+                    </div>
+					
+				</div>
+
+				<div class="cleaner"></div>
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>

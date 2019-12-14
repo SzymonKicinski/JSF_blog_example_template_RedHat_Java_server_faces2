@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<ui:composition template="/templates/main-template.xhtml">
+
+	<ui:define name="title">
+		#{mainPage.title}
+	</ui:define>
+
+	<ui:define name="content">
+
+		<h:form id="templatemo_wrapperAdd">
+			<div id="templatemo_wrapperAdd">
+
+				<div id="templatemo_sidebar">
+
+					<div id="menu">
+						<ul class="navigation">
+							<h:commandLink action="#{navigationController.showPage}"
+								value="Home">
+								<f:param name="pageId" value="home" />
+							</h:commandLink>
+							<li><a href="#" class="selected">Create note</a></li>
+							<h:commandLink action="#{navigationController.showPage}"
+								value="Note Dashboard">
+								<f:param name="pageId" value="dashboardNote" />
+							</h:commandLink>
+							<h:commandLink action="#{navigationController.showPage}"
+								value="Administration console">
+								<f:param name="pageId" value="adminConsole" />
+							</h:commandLink>
+						</ul>
+					</div>
+				</div>
+
+				<div id="templatemo_content">
+
+					<div class="panelAdd" id="contactus">
+						<h2>Note editor:</h2>
+
+						<div id="add_form" class="create">
+							<h1>Title of note:</h1>
+							<h:inputText id="title" value="#{editNoteBB.title}"
+								a:maxlength="150" />
+							<h1>Description of note:</h1>
+							<h:inputTextarea id="description"
+								value="#{editNoteBB.description}" a:maxlength="1000" />
+							<h1>Select assignee:</h1>
+							<h:selectOneMenu value="#{editNoteBB.assigneId}">
+								<f:selectItems value="#{editNoteBB.usersAsMap()}" var="user"
+									itemValue="#{user.userid}" itemLabel="#{user.name}" />
+							</h:selectOneMenu>
+							<h1>Change status:</h1>
+							<h:selectOneMenu value="#{editNoteBB.statusId}">
+								<f:selectItems value="#{editNoteBB.statusAsList()}" var="status"
+									itemValue="#{status.statusid}" itemLabel="#{status.status}" />
+							</h:selectOneMenu>
+							<div class="buttons">
+								<h:commandButton id="saveData" styleClass="submit_btn"
+									action="#{editNoteBB.saveData()}" update="msg"
+									value="SaveData" />			
+									<h:messages id="msg" style=" height:100%; font-size: 20px; align:center; margin:2px 0px 0px 0px"/>						
+							</div>			
+						</div>
+					</div>
+				</div>
+				<div class="cleaner"></div>
+			</div>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>

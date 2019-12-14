@@ -1,0 +1,113 @@
+/*
+Credit: http://www.templatemo.com
+*/
+
+/* 
+Cafe Bakery Template 
+http://www.templatemo.com/preview/templatemo_278_cafe_bakery 
+*/
+.footer {
+   position: relative;
+   bottom:0;
+   width:100%;
+   height:1px;   /* Height of the footer */
+}
+
+.page_wrapper{
+	height:100%;
+	background-color: #0f020b;
+}
+
+html{
+	height:100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #a2979e;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	line-height: 1.5em; 
+	background-color: #0f020b;
+	
+	background-repeat: no-repeat;
+	background-position: top;
+	height:100%;
+}
+
+a, a:link, a:visited { color: #ff58ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { margin: 0 0 15px 0; padding: 0; }
+img { border: none; }
+
+h1, h2, h3, h4, h5, h6 { color: #fff; }
+h1 { font-size: 30px; font-weight: normal; margin: 0 0 0px 0; padding: 5px 0; }
+h2 { font-size: 40px; font-weight: normal; margin: 0 0 30px 0; font-weight: normal; background: url(images/templatemo_divider.png) bottom repeat-x }
+h3 { font-size: 24px; margin: 0 0 30px 0; padding: 0; padding: 0; font-weight: normal;  }
+h4 { font-size: 16px; margin: 0 0 30px 0; padding: 0; color:black;}
+h6 { font-size: 12px;  padding: 0; width:15%; margin: 0 0 0 0;}
+.text {font-size: 15px; color: black}
+.text_title {font-size: 20px; color: black; text-align: center; margin: 30%;}
+.text_margin_left {font-size: 15px; color: black; margin-left:10px}
+h5 { font-size: 25px; margin: 0 0 10px 0; padding: 0; color:black; }
+
+
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+.cleaner_h10 { clear: both; width:100%; height: 10px; }
+.cleaner_h20 { clear: both; width:100%; height: 20px; }
+.cleaner_h30 { clear: both; width:100%; height: 30px; }
+.cleaner_h40 { clear: both; width:100%; height: 40px; }
+.cleaner_h50 { clear: both; width:100%; height: 50px; }
+.cleaner_h60 { clear: both; width:100%; height: 60px; }
+
+.float_l { float: left; }
+.float_r { float: right; }
+
+.image_wrapper { display: inline-block; border: 1px solid #2f2824; padding: 5px; margin-bottom: 10px; background: #000000; height:300px; weight:300px }
+.image_fl { float: left; margin: 3px 20px 0 0 }
+.image_ct { float: left; margin: 3px 20px 0 0 }
+
+.image_fr { float: right; margin: 3px 0 0 20px }
+
+blockquote { font-style: italic; margin: 0 0 0 10px;}
+cite { font-weight: bold; color:#fff; }
+cite a, cite a:link, cite a:visited  { font-weight: normal; color:#fff; }
+cite span { font-weight: 400; color: #ccc; }
+em { color: #fff; }
+
+.tmo_list { margin: 20px 0 20px 20px; padding: 0; list-style: none; }
+.tmo_list li { background: transparent url(images/templatemo_list.png) no-repeat; margin:0 0 20px; padding: 0 0 0 25px; line-height: 1em; }
+.tmo_list li a { color: #ff58ff; }
+.tmo_list li a:hover { color: #fff; }
+
+.post_box { clear: both; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dotted #999999 }
+.post_header { border-top: 3px solid #999; border-bottom: 1px solid #ccc; padding: 5px; margin-bottom: 20px }
+.post_box h2 { font-size: 22px; margin-bottom: 15px; background: none; padding-bottom: 5px }
+.post_box h2 a { color: #fff }
+.post_box p.post_meta { margin-bottom: 0 }
+.post_box img { float: left; margin-right: 20px }
+
+#contact_form {  padding: 0; width: 340px; }
+#contact_form form { margin: 0px; padding: 0px; }
+#contact_form form .input_field { width: 240px; padding: 2px 5px; color: #fff; background: #070105; border: 1px solid #660044; }
+#contact_form form label { display: block; width: 100px; margin-right: 10px; font-size: 14px; }
+#contact_form form textarea { width: 328px;  height: 80px; color: #fff; padding: 5px; background: #070105; border: 1px solid #660044; }
+
+#add_form {  margin: 40px 40px 40px 40px; width:90% }
+#add_form form { margin: 0px; padding: 0px; }
+#add_form commandButton .submit_btn  { padding: 10px 10px; color: #fff; background: #330022; border: 1px solid #660044; position: relative;}
+#add_form input { width: 100%; height: 3%; margin: 20px 20px 10px 20px; color: #fff; background: #330022; border: 3px solid #660044; position: relative; cursor: text;}
+#add_form textarea { width: 100%; height: 15%; margin: 20px 20px 10px 20px; color: #fff; background: #330022; border: 3px solid #660044; position: relative; cursor: text;}
+#add_form select { cursor: pointer; width: 50%; height: 5%; margin: 10px 20px 20px 20px; color: #fff; background: #330022; border: 3px solid #660044; position: relative; text-allign:center;}
+#add_form .buttons { padding: 10px 10px 10px 10px; position: relative; width:50%; margin: auto;}
+#add_form .buttons .submit_btn { width: 30%; padding: 5px 10px; color: #fff; background: #330022; border: 3px solid #660044; cursor: pointer; }
+
+#add_form_filter {  width:100%; height:5%}
+#add_form_filter input[type="text"] {  margin-left: 12px; width: 30%; height: 20%; color: #fff; background: #330022; border: 3px solid #660044; position: relative; cursor: text;}
+#add_form_filter input { margin-left: 5px;margin-top: 2px; color: #fff; background: #330022; border: 1px solid #660044; width:30px; height:30px; text-align: center; position: relative;}
+#add_form_filter select { cursor: pointer; width: 20%; height: 60%; color: #fff; background: #330022; border: 3px solid #660044; position: relative; text-allign:center;}
+
+.submit_btn { padding: 5px 10px; color: #fff; background: #330022; border: 1px solid #660044; }
+.submit_btn_filter { color: #fff; background: #ffff00; border: 1px solid #660044; float left;}

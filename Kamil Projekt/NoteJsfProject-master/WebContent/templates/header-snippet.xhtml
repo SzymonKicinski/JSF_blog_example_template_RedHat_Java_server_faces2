@@ -1,0 +1,13 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<h:outputText
+		value="#{mainPage.loggedAs} #{loginBB.user.name} " />
+	<h:form style="display:inline;">
+		<h:commandButton value="#{mainPage.logOut}" action="#{loginBB.doLogout()}" />
+	</h:form>
+
+
+</ui:composition>

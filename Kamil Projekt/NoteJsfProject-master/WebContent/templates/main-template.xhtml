@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Note</title>
+	<link type="image/x-icon" rel="shortcut icon"
+		href="#{resource['template:img/java.ico']}" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<h:outputStylesheet name="templatemo_style.css" library="template" />
+<h:outputStylesheet name="css/coda-slider.css" library="template" />
+</h:head>
+
+<h:body>
+	<div id="page_wrapper" class="page_wrapper">
+		<ui:insert name="header">
+			<div id="header" class="box bottom-space">
+				<ui:include src="/templates/header-snippet.xhtml" />
+			</div>
+		</ui:insert>
+		<ui:insert name="content">
+		<div id="content" class="box bottom-space">
+			<ui:insert name="content"></ui:insert>
+		</div>
+		</ui:insert>
+		<ui:insert name="footer">
+			<div id="footer" class="footer">
+				<ui:include src="/templates/footer-snippet.xhtml" />
+			</div>
+		</ui:insert>
+	</div>
+</h:body>
+
+</html>

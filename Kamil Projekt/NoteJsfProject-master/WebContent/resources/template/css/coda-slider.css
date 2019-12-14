@@ -1,0 +1,359 @@
+#slider {
+    position: relative;
+	width: 100%;
+	background-color: #0f020b;
+}
+
+#templatemo_wrapper {
+	width: auto;
+	height:100%;
+	margin: 0 auto;
+	background-color: #cfcfcf;
+	
+}
+
+#templatemo_wrapperAdd {
+	width: auto;
+	height:100%;
+	margin: 0 auto;
+	background-color: #cfcfcf;
+	
+}
+
+#templatemo_sidebar {
+	text-align: center;
+	background-color: #0f020b;
+	float: left;	
+	width: 15%;
+	height:100%;
+}
+
+#templatemo_content {
+	background-color: #cfcfcf;
+	float: right;
+	width: 85%;
+	height:100%;
+}
+
+#templatemo_content div.panel {
+	text-align: center;
+	padding: 40px;
+	overflow: hidden;
+}
+
+#templatemo_content div.panelAdd {
+	height: 90%;
+	weight: 90%;
+	text-align: center;	
+	overflow: hidden;
+}
+
+#templatemo_content div.panelAdd h2 {
+	color: #330022;
+	text-align: left;	
+	margin: 20px;
+}
+
+#header h1 { display: block; width: 315px; height: 166px; margin: 0 auto 80px; padding: 0 }
+#header h2 { display: block; width: 315px; height: 166px; margin: 10px; padding: 0 }
+#header h1 a { float: left; margin-top: 25px; width: 315px; height: 166px; background: url(../images/templatemo_logo.png); text-indent: -10000px; }
+
+#menu {	
+	padding: 20px 20px 0px 40px;
+	clear: both;
+	float: left;
+	text-align: left;
+	height: 100%;
+}
+
+#templatemo_footer {
+	clear: both;
+	bottom:0;
+    position: relative;
+	float: center;
+	margin: 0px 40px 0px 40px;
+	text-align: center;
+	background: #070105;
+	border: 1px solid #26071d;
+}
+#templatemo_footer a {
+	color: #fff;
+}
+
+.scroll {
+    width: 480px;
+    height: 580px;
+    overflow: auto;
+    /* overflow-x: hidden; */
+    position: relative;
+    clear: left;
+
+}
+
+.scrollContainer div.panel {
+    width: 400px;
+    height: 500px;
+	padding: 40px;
+	overflow: hidden;
+}
+
+ul.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navigation li {
+    margin: 0;
+	padding: 0;
+}
+
+ul.navigation a {
+	display: block;
+	float: right;
+	padding: 8px 15px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: 400;
+    text-decoration: none;
+	color: #fff;
+	text-align: right;
+}
+
+ul.navigation a:hover, ul.navigation a.selected {
+	background: #9d006c
+}
+
+ul.navigation a:focus {
+    outline: none;
+}
+
+
+.scrollButtons {
+    position: absolute;
+    top: 300px;
+    cursor: pointer;
+}
+
+.scrollButtons.left {
+    left: 0
+}
+
+.scrollButtons.right {
+    right: 0
+}
+
+.hide {
+    display: none;
+}
+
+.filter{
+	height: 10%;
+	width: 100%;
+	padding: 5px;
+	z-index: 2;
+}
+
+.filter input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.filter input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.filter input{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.filter input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.filter input[type=button]:active{
+	opacity: 0.6;
+}
+
+.filter input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.filter input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.filter input[type=button]:focus{
+	outline: none;
+}
+
+.create{
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	z-index: 2;
+}
+
+.create input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.create input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.create input{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.create input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.create input[type=button]:active{
+	opacity: 0.6;
+}
+
+.create input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.create input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.create input[type=button]:focus{
+	outline: none;
+}
+
+.dashboard {
+	overflow-y:scroll;
+	height:93%;
+	width:33.1%; 
+	background-color: #fff;
+	float: left;
+	background: #cfcfcf; 
+}
+
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #220022;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #220022;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #220022;
+}
+::-webkit-scrollbar-track {
+  background: #800040;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #800040;
+}
+::-webkit-scrollbar-track:active {
+  background: #800040;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.sticky {
+  right: 0;
+  z-index: 150;
+  width: auto;
+  border-radius: 15px;
+  min-height: auto;
+  margin: 10px 10px 10px;
+  padding: 10px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  background-image: url("#{resource['template/img/Screenshot_2.jpg']}");
+  background-size: 100% 100%;
+  box-shadow: -4px 4px 4px rgba(0,0,0,0.3);
+}
+.sticky:before, .sticky:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  right: 0;
+}
